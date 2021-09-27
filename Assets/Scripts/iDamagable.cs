@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 
 public interface iDamageable{
-    void damageTaken(float damage, RaycastHit hit);
+    void hitTaken(float damage, RaycastHit hit);
+    void damageTaken(float damage);
 }
 

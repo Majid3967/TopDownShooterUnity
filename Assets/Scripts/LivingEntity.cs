@@ -14,10 +14,14 @@ public class LivingEntity : MonoBehaviour,iDamageable
         health = startingHealth;
     }
 
-    public void damageTaken(float damage,RaycastHit hit)
+    public void hitTaken(float damage,RaycastHit hit)
+    {
+        damageTaken(damage);
+    }
+    public void damageTaken(float damage)
     {
         health -= damage;
-        if(!dead && health <= 0)
+        if (!dead && health <= 0)
         {
             Die();
         }
